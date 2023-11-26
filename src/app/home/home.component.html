@@ -1,0 +1,64 @@
+<div class="home-container">
+
+  <div class="logout-button-card">
+    <button class="logout-button" (click)="logout()">Logout</button>
+  </div>
+  <div class="main-heading-card">
+    <h1 class="main-heading">School Bus Management System</h1>
+  </div>
+  <div>
+    <h2>Bus Routes</h2>
+    <table class="bus-routes-table">
+      <thead>
+        <tr>
+          <th>Bus ID</th>
+          <th>Bus No</th>
+          <th>Destination</th>
+          <th>Driver Name</th>
+          <th>Fees Amount</th>
+          <th>Phone Number</th>
+          <th>Route No</th>
+          <th>Source</th>
+          <th>Stops</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let busRoute of busRoutes">
+          <td>{{ busRoute.busId }}</td>
+          <td>{{ busRoute.busNo }}</td>
+          <td>{{ busRoute.destination }}</td>
+          <td>{{ busRoute.driverName }}</td>
+          <td>{{ busRoute.feesAmount }}</td>
+          <td>{{ busRoute.phoneNum }}</td>
+          <td>{{ busRoute.routeNo }}</td>
+          <td>{{ busRoute.source }}</td>
+          <td>
+            {{ busRoute.stop1 }},
+            {{ busRoute.stop2 }},
+            {{ busRoute.stop3 }},
+            {{ busRoute.stop4 }}
+          </td>
+          <td>
+            <button class="action-button" (click)="enrollBusRoute(busRoute)">
+            Enroll
+          </button>
+            <button class="action-button" [ngClass]="{'disabled': isButtonDisabled}" (click)="editBusRoute(busRoute)"
+              [disabled]="isButtonDisabled">
+              edit
+            </button>
+            <button class="action-button" [ngClass]="{'disabled': isButtonDisabled}" (click)="deleteBusRoute(busRoute)"
+              [disabled]="isButtonDisabled">
+              delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div>
+    <button class="add-route-button" (click)="addRoute()">Add New Bus Route</button>
+  </div>
+
+</div>

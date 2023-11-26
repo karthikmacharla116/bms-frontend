@@ -1,0 +1,113 @@
+<!-- <mat-card>
+  <mat-card-title class="heading">Sign Up</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="registerForm" (ngSubmit)="registerSubmit(registerForm.value)">
+      <p>
+        <input type="text" matInput placeholder="User name" formControlName="name">
+      </p>
+
+      <p>
+        <input type="password" matInput placeholder="Password" formControlName="password">
+      </p>
+
+      <p>
+        <input type="password" matInput placeholder="Confirm Password" formControlName="password">
+      </p>
+
+       <p *ngIf="" class="error">
+      {{ error }}
+    </p> 
+
+      <p>
+        <input type="text" matInput placeholder="Date of Birth" formControlName="dob">
+      </p>
+
+      <p>
+        <input type="text" matInput placeholder="Department" formControlName="department">
+      </p>
+
+      <p>
+        <input type="text" matInput placeholder="Phone Number" formControlName="phoneNum">
+      </p>
+
+      <p>
+        <input type="text" matInput placeholder="Address" formControlName="address">
+      </p>
+
+      <p>
+        <input type="text" matInput placeholder="Route" formControlName="route">
+      </p>
+
+      <p>
+        <label for="role">Choose a role:</label>
+
+        <select name="role" id="role" formControlName="role">
+          <option value="admin">Admin</option>
+          <option value="faculty">Faculty</option>
+          <option value="student">Student</option>
+        </select>
+         <input type="text" matInput placeholder="role Ex: Faculty" [value]="role">
+          {{role}} 
+      </p>
+
+      <div class="button">
+        <button type="submit" mat-button>Register</button>
+      </div>
+      <p [innerText]="registrationStatus">{{registrationStatus}}</p>
+    </form>
+
+  </mat-card-content>
+</mat-card> -->
+
+
+<div class="reg-container">
+
+  <div class="reg-card">
+    <form [formGroup]="registerForm" (ngSubmit)="registerSubmit(registerForm.value)">
+      <h2>Register</h2>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" formControlName="name" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" formControlName="password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" formControlName="dob" required>
+      </div>
+      <div class="form-group">
+        <label for="department">Department</label>
+        <input type="text" id="department" formControlName="department" required>
+      </div>
+      <div class="form-group">
+        <label for="phonenumber">Phone Number</label>
+        <input type="number" id="phonenumber" formControlName="phoneNum" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" formControlName="address" required>
+      </div>
+      <div class="form-group">
+        <label for="route">Route</label>
+        <input type="text" id="route" formControlName="route" required>
+      </div>
+      <div class="form-group">
+        <label for="role">Role</label>
+        <select id="role" formControlName="role">
+          <option value="admin">Admin</option>
+          <option value="student">Student</option>
+          <option value="faculty">Faculty</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button  class="reg-button" type="submit">Register</button>
+      </div>
+      <div>
+        <h2>Already a user? <a class="login-link" routerLink="/login">Login</a></h2>
+      </div>
+    </form>
+  </div>
+</div>

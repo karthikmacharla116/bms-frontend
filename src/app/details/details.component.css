@@ -1,0 +1,71 @@
+.details-container {
+    padding: 20px;
+    background-image: linear-gradient(145deg, #33ccff, #99ccff, #ffffff);
+    font-family: Arial, sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+  }
+
+.logout-button-card {
+    align-self: flex-end;
+  }
+.logout-button {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #3B3B3B;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    /* line-height: normal; */
+    margin: 0;
+    height: 55px;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 150px;
+    will-change: transform;
+  }
+  
+  .logout-button:disabled,
+  .add-route-button:disabled {
+    pointer-events: none;
+  }
+  
+  .logout-button:hover,
+  .add-route-button:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .logout-button:active,
+  .add-route-button:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  
+  .logout-button:active,
+  .logout-button-card {
+    margin-left: auto;
+  }
+  
+.payment-card {
+    align-self: center;
+    background-color: #ffffff;
+    border-radius: 10%;
+    padding: 5%;
+  }
+

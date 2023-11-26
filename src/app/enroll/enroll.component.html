@@ -1,0 +1,25 @@
+<div class="enrollbus-container">
+
+  <div class="enrollbus-card">
+    <form [formGroup]="enrollBusForm" (ngSubmit)="enrollbusSubmit(enrollBusForm.value)">
+      <h2>Enroll for a bus route</h2>
+      <input type="number" hidden value="0" formControlName="enrollId">
+      <div class="form-group">
+        <label for="enrollname">Name</label>
+        <input type="text" id="enrollname" formControlName="enrollName">
+      </div>
+      <div class="form-group">
+        <label for="role">Role</label>
+        <input type="text" id="role" formControlName="role">
+      </div>
+      <!-- <div class="form-group">
+        <label for="amount">Amount</label>
+        <input type="text" id="amount" formControlName="amount">
+      </div> -->
+      <div class="form-group">
+        <button class="enrollbus-button" type="submit">Enroll</button>
+      </div>
+
+    </form>
+  </div>
+</div>

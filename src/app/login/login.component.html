@@ -1,0 +1,75 @@
+<!-- <h1> Login Form</h1> -->
+<!-- {{loginForm.value | json}}
+{{loginForm.pristine | json}}
+{{loginForm.dirty | json}} -->
+<!-- 
+  <mat-card>
+    <mat-card-title class="heading">Sign In</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="loginForm" (ngSubmit)="loginSubmit(loginForm.value)">
+        <p>
+          <input type="text" matInput placeholder="User Name" formControlName="userName">
+        </p>
+
+        <p>
+          <input type="password" matInput placeholder="Password" formControlName="password">
+        </p>
+         <p *ngIf="error" class="error">
+          {{ error }}
+        </p> 
+         <p>
+          <label for="role">Choose a role:</label>
+
+          <select name="role" id="role" formControlName="role">
+            <option value="admin">Admin</option>
+            <option value="faculty">Faculty</option>
+            <option value="student">Student</option>
+          </select>
+        </p>
+
+        <div class="button">
+          <button type="submit" mat-button>Login</button>
+        </div>
+        <p [innerText]="loginStatus">{{loginStatus}}</p>
+      </form>
+    </mat-card-content>
+    <div>
+      <h2>New user? <a class="register-link" routerLink="/register">Sign up now</a></h2>
+    </div>
+  </mat-card> -->
+
+
+<div class="login-container">
+
+  <div class="main-heading-card">
+    <h1 class="main-heading">School Bus Management System</h1>
+  </div>
+
+  <div class="login-card">
+    <form [formGroup]="loginForm" (ngSubmit)="loginSubmit(loginForm.value)">
+      <h2>Login</h2>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" formControlName="userName" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" formControlName="password" required>
+      </div>
+      <div class="form-group">
+        <label for="role">Role</label>
+        <select id="role" formControlName="role">
+          <option value="admin">Admin</option>
+          <option value="student">Student</option>
+          <option value="faculty">Faculty</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button class="reg-button" type="submit">Login</button>
+      </div>
+      <div>
+        <h2>New user? <a class="register-link" routerLink="/register">Sign up now</a></h2>
+      </div>
+    </form>
+  </div>
+</div>

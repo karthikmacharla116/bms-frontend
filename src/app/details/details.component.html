@@ -1,0 +1,34 @@
+<div class="details-container">
+
+  <div class="logout-button-card">
+    <button class="logout-button" (click)="logout()">Logout</button>
+  </div>
+
+  <div class="payment-card">
+    <h2>Enrolled Details</h2>
+    <table class="payment-table">
+      <thead>
+        <tr>
+          <!-- <th>Enroll ID</th>
+          <th>Enroll Name</th>
+          <th>Role</th>
+          <th>Payment Status</th> -->
+          <th>Receipt Id</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tr *ngFor="let enrollData of enrolledBusData;">
+          <td>{{ enrollData.enrollId }}</td>
+          <td>{{ enrollData.enrollName }}</td>
+          <td>{{ enrollData.role }}</td> 
+
+          <td>{{ enrollData.amount }}</td>
+        </tr> -->
+        <tr>
+          <td>{{ paymentData.receiptId }}</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
